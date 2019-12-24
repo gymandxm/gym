@@ -66,10 +66,11 @@ print(decision_tree_classifier.score(X_test, Y_test))
 
 # 使用训练的模型进行预测，为了方便，
 # 案例直接把测试集里面的数据拿出来三条
-print(X_test[0:3])#利用3个数据进行测试，即取3个数据作为模型的输入端
-model.predict(X_test[0:3])
-model2=list(model.predict(X_test[0:3]))
+x_test1=np.array([[13.52,3.17,2.72,23.5,97],[12.42,2.55,2.27,22,90],[13.76,1.53,2.7,19.5,132]])#利用3个数据进行测试，即取3个数据作为模型的输入端
+model.predict(x_test1[0:])
+model2=list(model.predict(x_test1[0:]))
 model2[0]='仙粉黛'
 model2[1]='西拉'
 model2[2]='赤霞珠'#语言转换
+print(x_test1)
 print(model2)#输出测试的结果，即输出模型预测的结果
